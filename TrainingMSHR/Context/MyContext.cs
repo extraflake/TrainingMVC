@@ -13,5 +13,6 @@ namespace TrainingMSHR.Context
 
         public DbSet<Department> Departments { get; set; }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Division> Divisions { get; set; }
     }
 }

@@ -1,0 +1,53 @@
+﻿@model TrainingMSHR.Models.Department
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="container">
+        <div class="form-group">
+            <label class="control-label col-md-2">Name</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" id="name" name="name" value="@Model.Name" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Created On</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" id="createdOn" name="createdOn" value="@Model.CreatedOn" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Division</label>
+            <div class="col-md-10">
+                <select class="form-control" id="divisionId" name="divisionId">
+                    <option value="0">--- Pilih Divisi ---</option>
+                    @foreach (var item in (IEnumerable<SelectListItem>)ViewBag.Divisions)
+                    {
+                        if (item.Selected)
+                        {
+                            <option value="@item.Value" selected>@item.Text</option>
+                        }
+                        else
+                        {
+                            <option value="@item.Value">@item.Text</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}

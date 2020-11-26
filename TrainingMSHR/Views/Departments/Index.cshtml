@@ -1,0 +1,35 @@
+﻿@model IEnumerable<TrainingMSHR.Models.Department>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<hr />
+
+<div class="form-group">
+    @Html.ActionLink("Create", "Create", null, new { @class = "btn btn-success" })
+</div>
+
+<div class="container">
+    <table class="table table-responsive">
+        <tr>
+            <th>Name</th>
+            <th>Created On</th>
+            <th>Division</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.CreatedOn</td>
+                <td>@item.Division.Name</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-info" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger"})
+                </td>
+            </tr>
+        }
+    </table>
+</div>

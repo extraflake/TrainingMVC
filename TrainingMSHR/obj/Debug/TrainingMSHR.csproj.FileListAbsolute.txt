@@ -169,3 +169,5 @@ E:\Project\TrainingMVC\TrainingMSHR\obj\Debug\TrainingMSHR.dll
 E:\Project\TrainingMVC\TrainingMSHR\obj\Debug\TrainingMSHR.pdb
 E:\Project\TrainingMVC\TrainingMSHR\obj\Debug\TrainingMSHR.Migrations.addmodeldivision.resources
 E:\Project\TrainingMVC\TrainingMSHR\obj\Debug\TrainingMSHR.Migrations.deleteFKdivision.resources
+E:\Project\TrainingMVC\TrainingMSHR\obj\Debug\TrainingMSHR.csprojAssemblyReference.cache
+E:\Project\TrainingMVC\TrainingMSHR\obj\Debug\TrainingMSHR.Migrations.addforeignkeydivisionondepartment.resources

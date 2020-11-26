@@ -9,6 +9,17 @@ namespace TrainingMSHR.Models
 {
     public class Employee
     {
+        public Employee() { }
+
+        public Employee(int id, string firstName, string lastName, DateTimeOffset birthDate, int departmentId)
+        {
+            Id = id;
+            FirstName = firstName;
+            LastName = lastName;
+            BirthDate = birthDate;
+            Department_Id = departmentId;
+        }
+
         [Key]
         public int Id { get; set; }
         public string FirstName { get; set; }

@@ -129,6 +129,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Context\MyContext.cs" />
     <Compile Include="Controllers\DepartmentsController.cs" />
+    <Compile Include="Controllers\DivisionsController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -149,6 +150,10 @@
     <Compile Include="Migrations\202011190714369_deleteFKdivision.cs" />
     <Compile Include="Migrations\202011190714369_deleteFKdivision.designer.cs">
       <DependentUpon>202011190714369_deleteFKdivision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011240233213_addforeignkeydivisionondepartment.cs" />
+    <Compile Include="Migrations\202011240233213_addforeignkeydivisionondepartment.designer.cs">
+      <DependentUpon>202011240233213_addforeignkeydivisionondepartment.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Department.cs" />
@@ -200,6 +205,11 @@
     <Content Include="Views\Employees\Details.cshtml" />
     <Content Include="Views\Employees\Edit.cshtml" />
     <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Divisions\Create.cshtml" />
+    <Content Include="Views\Divisions\Delete.cshtml" />
+    <Content Include="Views\Divisions\Details.cshtml" />
+    <Content Include="Views\Divisions\Edit.cshtml" />
+    <Content Include="Views\Divisions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -229,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011190714369_deleteFKdivision.resx">
       <DependentUpon>202011190714369_deleteFKdivision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011240233213_addforeignkeydivisionondepartment.resx">
+      <DependentUpon>202011240233213_addforeignkeydivisionondepartment.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

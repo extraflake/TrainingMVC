@@ -11,11 +11,12 @@ namespace TrainingMSHR.Models
     {
         public Department() { }
 
-        public Department(int id, string name, DateTimeOffset created_on)
+        public Department(int id, string name, DateTimeOffset createdOn, int divisionId)
         {
             Id = id;
             Name = name;
-            CreatedOn = created_on;
+            CreatedOn = createdOn;
+            Division_Id = divisionId;
         }
 
         [Key]
@@ -23,8 +24,8 @@ namespace TrainingMSHR.Models
         public string Name { get; private set; }
         public DateTimeOffset CreatedOn { get; private set; }
 
-        //public int Division_Id { get; private set; }
-        //[ForeignKey("Division_Id")]
-        //public Division Division { get; set; }
+        public int Division_Id { get; private set; }
+        [ForeignKey("Division_Id")]
+        public Division Division { get; set; }
     }
 }
